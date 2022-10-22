@@ -1,0 +1,9 @@
+function MemberCard() {
+    return(
+        <div>
+
+        </div>
+    );
+}
+
+export default MemberCard;
