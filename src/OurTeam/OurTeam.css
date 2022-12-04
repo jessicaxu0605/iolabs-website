@@ -1,0 +1,51 @@
+.person-card {
+    box-sizing: border-box;
+    margin-bottom: 8em;
+    display: grid;
+    grid-template-columns: 15em auto;
+    column-gap: 1em;
+    grid-template-rows: minmax(12em, auto) 2em;
+}
+
+.person-card .photo-container{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 12em;
+    width: 12em;
+    margin: 1em;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+}
+
+.person-card .photo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.person-card .content-container{
+    grid-column: 2;
+    grid-row:1;
+}
+
+.person-card h3{
+    margin-top: 0.4em;
+    font-size: 1.5em;
+    line-height: 0.6em;
+}
+
+.person-card .position{
+    line-height: 0.5em;
+}
+
+.person-card .contacts{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.person-card .contact-link{
+    display: inline;
+    padding-right: 1em;
+}

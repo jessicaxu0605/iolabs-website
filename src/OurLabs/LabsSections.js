@@ -1,8 +1,8 @@
-import HomeSection from "./HomeSection";
+import LabsTemplate from "./LabsTemplate";
 
 function Template(props){
     return(
-        <HomeSection
+        <LabsTemplate
             Classes = ''
             Heading =''
             DefaultContent={
@@ -20,7 +20,7 @@ function Template(props){
 
 function Advocacy(props){
     return(
-        <HomeSection
+        <LabsTemplate
             Classes = 'advocacy home-section'
             Heading ='Advocacy Lab'
             DefaultContent={
@@ -44,7 +44,7 @@ function Advocacy(props){
 
 function Education(props){
     return(
-        <HomeSection
+        <LabsTemplate
             Classes ='education home-section'
             Heading='Education Lab'
             DefaultContent={

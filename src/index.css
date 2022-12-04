@@ -1,43 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+    --margin: 25vw;
+    --connector-margin:8rem
+}
+
 body{
     margin:0px;
     font-family: "Poppins", sans-serif;
 }
 
-main{
-    width: 64vw;
+main, .main-style{
+    width: calc(100vw - 2 * var(--margin));
     margin: auto;
-    padding: 2em;
+    padding: 2em 2em 0;
+}
+
+.main-style{
+    padding: 0 2em;
 }
 
 .divider{
     padding: 2em;
 }
 
+.page-title{
+    font-size: 4em;
+}
+
+p{
+    margin: 0;
+}
+
+h2{
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.blue-text{
+    color: rgb(20, 190, 250);
+}
+
+.section-heading{
+    font-size: 3em;
+    margin: 0.25em 0;
+}
+
+.bullet{
+    position: relative;
+    left: calc(0vw - var(--connector-margin));
+    top: 32px;
+    height: 24px;
+    width: 24px;
+    background-color: rgb(250, 200, 70);
+    border-radius: 50%;
+}
+
+.main-connector{
+    width: 8px;
+    position: fixed;
+    left: calc(var(--margin) - var(--connector-margin) + 8px);
+    top: 0;
+    z-index: -1000;
+    background: rgb(250, 200, 70);
+    height: 100vh;
+}
+
+.connector{
+    background-color: white;
+    display: block;
+    position: relative;
+    width: 8px;
+    height: 48px;
+    margin: -8px auto;
+}
 /*for the navbar -------------------------------------*/
 
 .navbar{
-    box-shadow: 0 0 10px 0 rgb(180, 180, 180);
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     margin: 0;
     width: 100vw;
+    height: 3.5em;
     display: flex;
     justify-content: space-between;
     align-content: center;
+    z-index: 100;
+}
+
+.spacer{
+    height: 3.5em;
 }
 
 .home-link{
-    height:60px;
+    height:3.5em;
 }
 
 .home-link-img{
-    height:60px;
+    height:100%;
 }
 
 .nav-items{
     list-style: none;
     display: inline-flex;
     justify-content: space-between;
+    align-items: center;
     margin:0;
     padding: 1em;
 }
@@ -54,6 +122,31 @@ main{
 
 .nav-link:hover{
     color: black;
+}
+
+/*for the footer ----------------------------*/
+
+footer{
+    position:relative;
+    background-color: black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4em;
+}
+
+footer.contacts{
+    width:25vw;
+}
+
+footer .contact-links{
+    display: inline-flex;
+    width: 25vw;
+    justify-content: left;
+}
+
+footer .contact-links a{
+    display: inline;
+    padding: 0.5em 1em; 
 }
 
 /*for the dropdown arrows ----------------------------*/
@@ -75,82 +168,23 @@ main{
     background-image: url(./assets/downarrow.svg);  
 }
 
-
-  /*slideshow -------------------------*/
-
-.slideshow-container{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+.button-container{
     width: 100vw;
-    object-fit: contain;
-    height:80vh;
-    overflow: hidden;
-    position: relative;
+    display:inline-flex;
+    justify-content: center;
 }
 
-.slides{
-    display:grid;
-    position: relative;
-    vertical-align: middle;
-    min-width: auto;
-
-}
-
-.slide{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    object-position: 50%;
-}
-
-.current-slide, .exit-slide{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-
-.current-slide{
-    animation-name: fade;
-    animation-duration: 1.5s;
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;    
-    -moz-animation-name: fade;
-    -moz-animation-duration: 1.5s;
-}
-
-@keyframes fade{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@-webkit-keyframes fade{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-@-moz-keyframes fade{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-.slideshow-controls{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin-top: calc(80vh - 80px);
-    z-index: 1;
-}
-
-.slideshow-toggle{
-    background-color: rgb(160, 160, 160);
-    box-shadow: 0px 0px 15px black;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin:20px;
-    display: inline-block;
-    cursor: pointer;
-}
-
-
-.slideshow-toggle.active{
-    background-color: white;
+.button{
+    display:inline-block;
+    box-sizing: border-box;
+    border-radius: 50vh;
+    border-width: 3px;
+    border-style: solid;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: black;
+    color: black;
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: 600;
 }

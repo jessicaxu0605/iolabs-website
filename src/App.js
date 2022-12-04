@@ -1,19 +1,27 @@
+import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import HomePage from './components/Home/HomePage';
 import Navbar from './components/Navbar';
-//commenynhgfgjy
+import HomePage from './Home/HomePage';
+import OurTeamPage from './OurTeam/OurTeamPage';
+import EventsPage from './Events/EventsPage';
+import OurLabsPage from './OurLabs/OurLabsPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
     <header>
       <Navbar/>
+      <div className='spacer'/>
     </header>
     <Routes>
       <Route path='/' element={<HomePage/>}/>
-      <Route path='/team' element={<h1>Our Team</h1>}/>
+      <Route path='/team' element={<OurTeamPage/>}/>
+      <Route path='/events' element={<EventsPage/>}/>
+      <Route path='/labs' element={<OurLabsPage/>}/>
     </Routes>
-    </div>
+    <Footer/>
+    </React.Fragment>
   );
 }
 

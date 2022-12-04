@@ -1,7 +1,7 @@
-import DropdownArrow from "../DropdownArrow";
-import Dropdown from "../Dropdown";
+import Dropdown from "../components/Dropdown";
+import Button from "../components/Button";
 
-function HomeSection (props) {
+function LabsTemplate (props) {
     const defaultContent = 
         <div className={props.Classes}>
             <h2>{props.Heading}</h2>
@@ -22,13 +22,13 @@ function HomeSection (props) {
         return( 
             <Dropdown 
                 DefaultContent={defaultContent}
-                ExpandedContent={expandedContent} 
-                ToggleType={DropdownArrow} 
-                className='home-section'/> 
+                ExpandedContent={expandedContent}
+                ToggleType={Button} 
+                className='lab-section'/>
         );
     }
 }
 
-export default HomeSection;
+export default LabsTemplate;
 
 //props: Classes, Heading, DefaultContent, ExpandedContent, Dropdown
