@@ -2,7 +2,11 @@
 
 :root {
     --margin: 25vw;
-    --connector-margin:8rem
+    --connector-margin:8rem;
+    --io-red: rgb(255, 115, 115);
+    --io-yellow: rgb(250, 200, 70);
+    --io-blue: rgb(20, 190, 250);
+    --standard-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
 }
 
 body{
@@ -13,7 +17,7 @@ body{
 main, .main-style{
     width: calc(100vw - 2 * var(--margin));
     margin: auto;
-    padding: 2em 2em 0;
+    padding: 0 2em 2em;
 }
 
 .main-style{
@@ -38,7 +42,7 @@ h2{
 }
 
 .blue-text{
-    color: rgb(20, 190, 250);
+    color: var(--io-blue);
 }
 
 .section-heading{
@@ -52,7 +56,7 @@ h2{
     top: 32px;
     height: 24px;
     width: 24px;
-    background-color: rgb(250, 200, 70);
+    background-color: var(--io-yellow);
     border-radius: 50%;
 }
 
@@ -62,7 +66,7 @@ h2{
     left: calc(var(--margin) - var(--connector-margin) + 8px);
     top: 0;
     z-index: -1000;
-    background: rgb(250, 200, 70);
+    background: var(--io-yellow);
     height: 100vh;
 }
 
@@ -79,7 +83,7 @@ h2{
 .navbar{
     position: fixed;
     background-color: white;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--standard-shadow);
     margin: 0;
     width: 100vw;
     height: 3.5em;
@@ -169,9 +173,10 @@ footer .contact-links a{
 }
 
 .button-container{
-    width: 100vw;
-    display:inline-flex;
+    width: 100%;
+    display: inline-flex;
     justify-content: center;
+    padding: 1rem;
 }
 
 .button{
