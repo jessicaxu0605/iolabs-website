@@ -9,7 +9,7 @@ function HomePage() {
     return(
         <React.Fragment>
             <Slideshow/>
-            <main className='home'>
+            <main className='home' style={{paddingBottom:'0'}}>
                 <div className='main-connector'/>
                 <div className='about-us'>                 
                     <h1 className='section-heading blue-text'>About Us</h1>
@@ -30,7 +30,7 @@ function HomePage() {
                     <div className='horizontal-connector'></div>
                     <div className='horizontal-connector spacing'></div>
                 </div>
-                <div className='connector' style={{left:'calc(4em)', margin:'0', backgroundColor:'rgb(250, 200, 70)'}}></div>
+                <div className='connector' style={{left:'calc(4em)', margin:'0', backgroundColor:'var(--io-yellow)'}}></div>
 
                 <section className='our-labs'>
                     <div className='connector' style={{left:'calc(var(--margin) + 4em)', margin:'0'}}></div>
@@ -63,13 +63,13 @@ function HomePage() {
                     <Link to='/labs' className='button-link' style={{textDecoration:'none'}}>
                         <Button
                             Toggled={()=>null}
-                            Color='white'
-                            BorderColor='white'
-                            ActivatedColor='rgb(255, 115, 115)'
-                            ActivatedBorderColor='white'
-                            ActivatedBackgroundColor='white'
-                            Content='Learn More >'
-
+                            Text='Learn More >'
+                            DefaultStyle={{color:'white', borderColor:'white'}}
+                            ActivatedStyle={{
+                                color:'var(--io-red)',
+                                borderColor:'white',
+                                backgroundColor:'white'
+                            }}
                         />
                     </Link>
                 </section>
