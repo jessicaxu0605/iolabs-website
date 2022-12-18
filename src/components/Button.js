@@ -5,17 +5,9 @@ function Button (props) {
 
     const buttonStyle = () => 
     buttonState==='default'?
-    {
-        color: props.Color,
-        borderColor: props.BorderColor,
-        backgroundColor: props.BackgroundColor
-    } :
-    {
-        color: props.ActivatedColor,
-        borderColor: props.ActivatedBorderColor,
-        backgroundColor: props.ActivatedBackgroundColor
-    };
-
+    props.DefaultStyle :
+    {...props.DefaultStyle,...props.ActivatedStyle}
+ 
     
     return(
         <div className='button-container'>
@@ -24,11 +16,15 @@ function Button (props) {
                 onMouseEnter={()=>setButtonState('activated')} 
                 onMouseLeave={()=>setButtonState('default')}
                 onClick={()=>props.Toggled()}
-                className='button'>
-                    {props.Content}
+                className='button'
+            >
+            {props.Dropdown==false ? props.ClickedText : props.Text}
             </button>
         </div>
     );
 }
 
 export default Button;
+
+//props: Toggled, ClickedText(optional)
+//DefaultStyle, ActivatedStyle (optional)
