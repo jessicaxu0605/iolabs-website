@@ -1,13 +1,12 @@
 
-
-.our-labs{
-    background-color: rgb(255, 115, 115);
+.home .our-labs{
+    background-color: var(--io-red);
     width: 100vw;
     margin: 0 calc(0vw - var(--margin)); 
     padding: 0 0 4em;
 }
 
-.labs{
+.home .labs{
     width: 100%;
     box-sizing: border-box;
     padding: 0 8vw;
@@ -17,19 +16,19 @@
     flex-wrap: wrap;
 }
 
-.our-labs .homepage-lab{
+.home .our-labs .homepage-lab{
     width: 17rem;
     margin: auto;
     text-align: center;
     padding-bottom: 4em;
 }
 
-.our-labs p{
+.home .our-labs p{
     font-weight: 500;
 }
 
 
-.our-labs .inline-bullet{
+.home .our-labs .inline-bullet{
     background-color: white;
     display: block;
     position: relative;
