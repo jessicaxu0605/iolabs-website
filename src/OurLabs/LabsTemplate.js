@@ -24,12 +24,14 @@ function LabsTemplate (props) {
         {Text:'Show Less',
         ClickedText:'Show More',
         DefaultStyle: {
-            color:'white',
+            color:'var(--io-blue)',
             borderColor:'var(--io-blue)',
-            backgroundColor:'var(--io-blue)'
+            backgroundColor:'white'
         },
         ActivatedStyle:{
-            boxShadow:'var(--standard-shadow'
+            backgroundColor: 'var(--io-blue)',
+            color: 'white',
+            transition: '120ms ease-in'
         }}
 
 

@@ -9,6 +9,9 @@ function Navbar(){
                 </Link>
                 <ul className='nav-items'>
                     <li className='nav-item'>
+                        <Link to='/' className='nav-link'>Home</Link>
+                    </li>
+                    <li className='nav-item'>
                         <Link to='/team' className='nav-link'>Our Team</Link>
                     </li>
                     <li className='nav-item'>

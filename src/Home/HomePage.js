@@ -68,7 +68,8 @@ function HomePage() {
                             ActivatedStyle={{
                                 color:'var(--io-red)',
                                 borderColor:'white',
-                                backgroundColor:'white'
+                                backgroundColor:'white',
+                                transition: '120ms ease-in'
                             }}
                         />
                     </Link>
