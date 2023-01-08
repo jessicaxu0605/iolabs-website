@@ -30,7 +30,7 @@
 .person-card h3{
     margin-top: 0.4em;
     font-size: 1.5em;
-    line-height: 0.6em;
+    line-height: 1em;
 }
 
 .person-card .position{
@@ -40,7 +40,7 @@
 .person-card .contacts{
     grid-column: 2;
     grid-row: 2;
-    padding: 0;
+    padding: 1em 0;
     list-style: none;
     margin: 0;
 }
@@ -48,4 +48,9 @@
 .person-card .contact-link{
     display: inline;
     padding-right: 1em;
+}
+
+.our-team.bullet{
+    position: relative;
+    top: 7em;
 }
