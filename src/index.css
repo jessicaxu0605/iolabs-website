@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+    --scrollbar-width: calc(50vw - 50%);
     --margin: 25vw;
     --connector-margin:8rem;
     --io-red: rgb(255, 115, 115);
@@ -53,7 +54,7 @@ h2{
 .bullet{
     position: relative;
     left: calc(0vw - var(--connector-margin));
-    top: 32px;
+    top: 48px;
     height: 24px;
     width: 24px;
     background-color: var(--io-yellow);
@@ -62,6 +63,7 @@ h2{
 
 .main-connector{
     width: 8px;
+    margin-left: calc(0vw - var(--scrollbar-width)); 
     position: fixed;
     left: calc(var(--margin) - var(--connector-margin) + 8px);
     top: 0;
@@ -94,7 +96,9 @@ h2{
 }
 
 .spacer{
+    position: relative;
     height: 3.5em;
+    background-color: white;
 }
 
 .home-link{
@@ -193,3 +197,4 @@ footer .contact-links a{
     font-size: 1.2em;
     font-weight: 600;
 }
+
