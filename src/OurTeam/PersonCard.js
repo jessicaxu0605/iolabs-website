@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {ReactComponent as Website, } from '../assets/icons/website.svg';
 import {ReactComponent as LinkedIn, } from '../assets/icons/linkedin.svg';
 import {ReactComponent as Instagram, } from '../assets/icons/instagram.svg';
@@ -46,6 +48,8 @@ function MemberCard(props) {
         'no bio yet';
 
     return(
+        <React.Fragment>
+        <div className='our-team bullet'/>
         <div className={'person-card ' + props.Class}>
             <div className='photo-container'>
                 <img className='photo'src={hasImage()} alt={props.Name + "'s Photo"}/>
@@ -64,6 +68,7 @@ function MemberCard(props) {
                     {hasContact(props.Github)}
             </ul>
         </div>
+        </React.Fragment>
     );
 }
 
