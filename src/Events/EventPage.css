@@ -1,5 +1,12 @@
 .eventCard {
-    margin: 2rem 20% 4rem 20%;
+    margin: 2rem 20% 2rem 20%;
+    border: 2px solid var(--io-red);
+    border-radius: 15px;
+}
+
+.eventCard-passed {
+    margin: 2rem 20% 2rem 20%;
+    border: none;
 }
 
 .eventName {
@@ -41,6 +48,7 @@
     display: grid;
     gap: 1em;
     grid-template-columns: 1fr 1fr;
+    margin: 0 30px 30px 30px;
 }
 
 .grid-span-2 {
@@ -49,6 +57,13 @@
 
 .eventStatus {
     color: var(--io-red);
+    font-size: 11px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.eventStatus-passed {
+    color: var(--io-blue);
     font-size: 11px;
     margin-top: auto;
     margin-bottom: auto;

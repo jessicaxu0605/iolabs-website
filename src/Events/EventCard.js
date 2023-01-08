@@ -1,17 +1,24 @@
-import Dropdown from '../components/Dropdown';
-import DropdownArrow from '../components/DropdownArrow';
-
 function EventCard(props){
+    let status;
+        if (props.Status==='upcoming'){
+            status = <p class='eventStatus'>Upcoming Event!</p>;
+        } else {
+            status = <p class='eventStatus-passed'>Passed Event</p>;
+        }
+    
+    let eventClass;
+        if  (props.Status==='upcoming'){
+            eventClass = 'eventCard';
+        } else {
+            eventClass = 'eventCard-passed';
+        }
 
     return(
-        <div class='eventCard'>
-            {/* <div>
-                <img class='eventImage' src='{require(props.eventImg)}' alt={props.eventName + ' image'}></img>
-            </div> */}
+        <div class={eventClass}>
             <div class="eventSection">
                 <div class="eventHeader grid-span-2">
                     <h1 class='eventName'>{props.eventName}</h1>
-                    <p class='eventStatus'>{props.Status}</p>
+                    {status}
                 </div>
                 <p class='eventDescription grid-span-2'>{props.Description}</p>
                 <p class='eventDate'>{props.Date}</p>
@@ -23,7 +30,7 @@ function EventCard(props){
         </div>
     );
 
-    // eventName, Date, Description, Status, Register, eventUrl, eventImg
+    // eventName, Date, Description, Status, Register, eventUrl
 
     
     // const hasDate = ()=>
