@@ -6,6 +6,7 @@ import './OurTeam.css';
 function OurTeamPage() {
     return(
         <React.Fragment>
+            <div className='main-connector'/>
             <main>
                 <h1 className='page-title'>Meet Our Team!</h1>
                 <PersonCard
