@@ -77,3 +77,32 @@
     display: grid;
     grid-template-columns: auto 1fr;
 }
+
+@media only screen and (max-width: 650px) {
+    .eventCard {
+        margin: 2rem 10% 2rem 10%;
+        border: 2px solid var(--io-red);
+        border-radius: 15px;
+    }
+    .eventCard-passed {
+        margin: 2rem 10% 2rem 10%;
+        border: none;
+    }
+    .eventName {
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+    .eventSection {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 30px 30px 30px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .eventHeader {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
