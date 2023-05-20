@@ -6,7 +6,7 @@ function Button (props) {
     const buttonStyle = () => 
     buttonState==='default'?
     props.DefaultStyle :
-    {...props.DefaultStyle,...props.ActivatedStyle}
+    {...props.DefaultStyle,...props.ActivatedStyle,...{transition: '200ms ease-in'}}
  
     
     return(
@@ -26,5 +26,4 @@ function Button (props) {
 
 export default Button;
 
-//props: Toggled, ClickedText(optional)
-//DefaultStyle, ActivatedStyle (optional)
+//props: Toggled, ClickedText(optional), Text, DefaultStyle (optional), ActivatedStyle (optional)

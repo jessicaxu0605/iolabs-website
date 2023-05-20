@@ -6,7 +6,7 @@ function Dropdown(props) {
     
 
     return(
-        <div className='dropdown-section' style={{margin:'1rem 0'}}>
+        <div className='dropdown-section'>
              {dropdownOpen ? props.ExpandedContent : props.DefaultContent} 
              <div>
                 <props.ToggleType Dropdown={dropdownOpen} Toggled={toggleDropdown} {...props.ToggleAttributes}/>
@@ -17,4 +17,4 @@ function Dropdown(props) {
 
 export default Dropdown;
 
-//<props.ToggleType Dropdown={dropdownOpen} Toggled={toggleDropdown}/>
+//props: DefaultContent, ExpandedContent, ToggleType

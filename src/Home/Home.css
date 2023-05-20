@@ -2,7 +2,8 @@
 .home .our-labs{
     background-color: var(--io-red);
     width: 100vw;
-    margin: 0 calc(0vw - var(--margin)); 
+    position: relative;
+    left: calc(0px - var(--margin));
     padding: 0 0 4em;
 }
 
@@ -17,7 +18,8 @@
 }
 
 .home .our-labs .homepage-lab{
-    width: 17rem;
+    width: 17.5rem;
+    min-height: 18rem;
     margin: auto;
     text-align: center;
     padding-bottom: 4em;
@@ -54,4 +56,37 @@
     width:8em;
     height:48px;
     z-index: -1;
+}
+
+@media only screen and (max-width: 650px) {
+    .main-connector, .horizontal-connector, .inline-bullet, .connector, .lab-connector{
+        display: none !important; 
+    }
+   
+    .home .main-style {
+        width: 100%;
+        margin: 0 -6vw;
+        text-align: center;
+    }
+
+    .home .our-labs {
+        margin-top: 3rem;
+        box-sizing: border-box;
+        padding: 2rem;
+        margin: 3rem -6vw 0;
+        left: 0;
+    }
+
+    .home .labs{
+        width: 100%;
+        padding: 0
+    }
+
+    .home .homepage-lab{
+        width: 100% !important;
+    }
+
+    .home .our-labs .homepage-lab{
+        min-height: 0rem;
+    }
 }

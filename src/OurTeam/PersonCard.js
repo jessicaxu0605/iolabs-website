@@ -1,5 +1,5 @@
 import React from 'react';
-
+import DefaultImg from './DefaultImg.png'
 import {ReactComponent as Website, } from '../assets/icons/website.svg';
 import {ReactComponent as LinkedIn, } from '../assets/icons/linkedin.svg';
 import {ReactComponent as Instagram, } from '../assets/icons/instagram.svg';
@@ -8,7 +8,7 @@ import {ReactComponent as Facebook, } from '../assets/icons/facebook.svg';
 import {ReactComponent as Github, } from '../assets/icons/github.svg';
 
 
-function MemberCard(props) {
+function PersonCard(props) {
     const displayIcon = function (contactType) {
         switch (contactType) {
             case props.Website:
@@ -39,8 +39,8 @@ function MemberCard(props) {
 
     const hasImage = ()=>
         props.Image ? 
-        require(props.Image) : 
-        require('../assets/ioLogo-nav.png');
+        props.Image : 
+        DefaultImg;
 
     const hasBio = ()=>
         props.Bio ? 
@@ -72,4 +72,5 @@ function MemberCard(props) {
     );
 }
 
-export default MemberCard;
+export default PersonCard;
+//props: Class, Name, Position, Image, Bio, Website, LinkedIn, Instagam, Twitter, Facebook, Github

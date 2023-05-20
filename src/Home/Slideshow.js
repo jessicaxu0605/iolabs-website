@@ -1,4 +1,3 @@
-import { findByLabelText } from '@testing-library/react';
 import {useEffect, useState, useRef} from 'react';
 import './Slideshow.css';
 
@@ -24,9 +23,9 @@ function Slideshow() {
         timer.current = setTimeout(()=>{
             setExitSlide(slide);
             setSlide((slide+1)%numSlides);
-        },10000);
+        },15000);
         return() => clearTimeout(timer.current);
-    }, [slide, exitSlide]);
+    }, [slide, exitSlide, numSlides]);
 
     const slideState = (index)=> {
         if (index===slide) {
@@ -59,9 +58,10 @@ function SlideshowToggle(props) {
         <span className= {props.Slide===props.ActiveSlide ? 'slideshow-toggle active' : 'slideshow-toggle'} onClick={()=>props.Toggled()}></span>
     );
 }
+//SlideshowToggle props: Slide, ActiveSlide, Toggled()
 
 function Slide1() {
-    const contentStyle = {
+    let contentStyle = {
         position: 'absolute',
         padding: '4em',
         top: '5em',
@@ -69,25 +69,47 @@ function Slide1() {
         width: '30em',
     };
     
-    const headingStyle = {
+    let headingStyle = {
         fontSize: '4em',
         lineHeight: '0.5em',
-
     };
 
-    const backingStyle = {
+    let backingStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
         height: '100%',
         width: '70em',
         position: 'relative',
         left: '-30em',
         transform: 'skew(-18deg)',
-    };
+    };  
+
+    let mediaQuery = window.matchMedia('(max-width: 650px)')
+    if (mediaQuery.matches) {
+        contentStyle = {
+            position: 'absolute',
+            boxSizing: 'border-box',
+            padding: '1em',
+            top: '20%',
+            color: 'white',
+            width: '100vw',
+        };
+
+        headingStyle = {
+            fontSize: '3.5em',
+            lineHeight: '0.5em',
+        };
+
+        backingStyle = {
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            height: '100%',
+            width: '100%',
+        };
+    } 
 
     return(
     <div className='slide'>
         <img src={require('../assets/slideshow1.jpg')} className='background' alt='first slide' 
-            style={{objectPosition: '50% 10%'}}/>
+            style={{objectPosition: '50% 40%'}}/>
         <div className='foreground'>
             <div style={backingStyle}></div>
             <div style={contentStyle}>
@@ -103,7 +125,7 @@ function Slide2() {
     return(
     <div className='slide'>
         <img src={require('../assets/slideshow2.jpg')} className='background' alt='second slide'
-            style={{objectPosition: '50% 65%'}}
+            style={{objectPosition: '50% 30%'}}
         />
     </div>
     );

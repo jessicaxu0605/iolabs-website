@@ -1,6 +1,7 @@
 import React from 'react';
-import {Advocacy, Education} from './LabsSections';
+import {Advocacy, Education, Events, Opportunities} from './LabsSections';
 import HeaderBanner from '../components/HeaderBanner';
+    //props: ImageSrc, Text
 import HeaderBackground from '../assets/our-labs-banner.png';
 
 function OurLabsPage() {
@@ -19,6 +20,14 @@ function OurLabsPage() {
                 <section>
                     <div className='bullet'/>
                     <Education/>
+                </section>
+                <section>
+                    <div className='bullet'/>
+                    <Events/>
+                </section>
+                <section>
+                    <div className='bullet'/>
+                    <Opportunities/>
                 </section>
             </main>
         </React.Fragment>

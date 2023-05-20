@@ -1,13 +1,30 @@
 import {Link} from 'react-router-dom';
+import {useState, useEffect} from 'react';
+import { useLocation } from 'react-router-dom';
+import Button from './Button.js'
 
 function Navbar(){
+    const [showNav, setShowNav] = useState(false);
+
+    const location = useLocation();
+    useEffect(() => {
+        setShowNav(false);
+      }, [location]);
+
+    const toggleNav = () => {
+        setShowNav(!showNav);
+    };
+
     return(
         <header>
             <nav className='navbar'>
                 <Link to='/' className='home-link'>
                     <img src={require('../assets/ioLogo-nav.png')} alt='Home' className='home-link-img'/>
                 </Link>
-                <ul className='nav-items'>
+                <button onClick={toggleNav} className='nav-button'>
+                    <span/><span/><span/>
+                </button>
+                <ul className={`nav-items ${showNav ? 'show' : ''}`}>
                     <li className='nav-item'>
                         <Link to='/' className='nav-link'>Home</Link>
                     </li>

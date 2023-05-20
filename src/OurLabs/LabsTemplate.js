@@ -31,7 +31,6 @@ function LabsTemplate (props) {
         ActivatedStyle:{
             backgroundColor: 'var(--io-blue)',
             color: 'white',
-            transition: '120ms ease-in'
         }}
 
 
@@ -48,4 +47,4 @@ function LabsTemplate (props) {
 
 export default LabsTemplate;
 
-//props: Classes, Heading, DefaultContent, ExpandedContent, Dropdown
+//props: Classes, Heading, DefaultContent, ExpandedContent

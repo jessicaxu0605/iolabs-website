@@ -1,9 +1,9 @@
 .slideshow-container{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
-    width: 100vw;
+    width: 100%;
     height:80vh;
     object-fit: contain;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -97,4 +97,11 @@
 
 .slideshow-toggle.active{
     background-color: white;
+}
+
+@media only screen and (max-width: 650px) {
+    .foreground {
+        position: relative;
+        width: 100vw;
+    }
 }

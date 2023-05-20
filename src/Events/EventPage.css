@@ -1,6 +1,6 @@
 .eventCard {
     margin: 2rem 20% 2rem 20%;
-    border: 2px solid var(--io-red);
+    border: 3px solid var(--io-red);
     border-radius: 15px;
 }
 
@@ -81,7 +81,7 @@
 @media only screen and (max-width: 650px) {
     .eventCard {
         margin: 2rem 10% 2rem 10%;
-        border: 2px solid var(--io-red);
+        border: 3px solid var(--io-red);
         border-radius: 15px;
     }
     .eventCard-passed {

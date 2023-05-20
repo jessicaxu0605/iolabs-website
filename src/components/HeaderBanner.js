@@ -1,28 +1,9 @@
 function HeaderBanner(props){
 
-    const bannerStyle={
-        position: 'relative',
-        width: '100vw',
-        height: '280px',
-        margin: '0',
-        overflow: 'hidden',
-        objectFit: 'cover',
-        boxShadow: 'var(--standard-shadow)',
-    }
-
-    const h1Style={
-        fontSize: '6rem',
-        fontWeight: 'bold',
-        color: 'white',
-        paddingLeft: 'var(--margin)',
-        whiteSpace: 'nowrap',
-        position: 'absolute'
-    }
-
     return(
-        <div className='our-labs banner' style={bannerStyle}>
+        <div className='banner'>
             <img src={props.ImageSrc} style={{position:'absolute'}}/>
-            <h1 style={h1Style}>
+            <h1>
                 {props.Text}
             </h1>
         </div>
@@ -30,3 +11,4 @@ function HeaderBanner(props){
 }
 
 export default HeaderBanner;
+//props: ImageSrc, Text

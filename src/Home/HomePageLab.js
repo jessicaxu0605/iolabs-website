@@ -1,6 +1,5 @@
 function HomePageLab (props){
 
-    
     const horizontalConnector = () =>{
         if (props.Position==='left'){
             return(
@@ -10,7 +9,7 @@ function HomePageLab (props){
                     height: '8px',
                     width: 'calc(8.5em + 4px)',
                     left:'calc(8.5em + 4px)'
-                }}></div>
+                }} className='lab-connector'></div>
             );
         } else if (props.Position==='right') {
             return(
@@ -19,7 +18,7 @@ function HomePageLab (props){
                     position: 'relative',
                     height: '8px',
                     width: 'calc(8.5em + 4px)',
-                }}></div>
+                }} className='lab-connector'></div>
             );
         } else {
             return(
@@ -29,7 +28,7 @@ function HomePageLab (props){
                 height: '8px',
                 width: 'calc(34em)',
                 left:'calc(-8.5em - 4px)'
-            }}></div>
+            }} className='lab-connector'></div>
             );
         } 
     }
@@ -46,3 +45,4 @@ function HomePageLab (props){
 }
 
 export default HomePageLab;
+//props: Heading, Content, Position [left, center, right]
