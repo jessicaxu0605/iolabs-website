@@ -1,0 +1,22 @@
+footer{
+    position:relative;
+    background-color: black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4em;
+}
+
+footer.contacts{
+    width:25vw;
+}
+
+footer .contact-links{
+    display: inline-flex;
+    width: 25vw;
+    justify-content: left;
+}
+
+footer .contact-links a{
+    display: inline;
+    padding: 0.5em 1em; 
+}

@@ -1,0 +1,43 @@
+.banner {
+    position: relative;
+    width: 100vw;
+    max-width: none;
+    height: 280px;
+    margin: 0 0 3rem;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: var(--standard-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    padding-left: var(--margin);
+    white-space: nowrap;
+    position: absolute;
+}
+
+.banner img{
+    position: absolute;
+}
+/*reponsiveness for mobile screens ----------------------------*/
+
+@media only screen and (max-width: 970px) {
+    .banner h1 {
+        position: relative;
+        width: 100vw;
+        padding-left: 0;
+        text-align: center;
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .banner h1 {
+        white-space: normal;
+    }
+}

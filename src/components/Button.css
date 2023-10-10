@@ -1,0 +1,21 @@
+.button-container{
+    width: 100%;
+    margin: 0.5rem 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.button{
+    display:inline-block;
+    box-sizing: border-box;
+    border-radius: 50vh;
+    border-width: 3px;
+    border-style: solid;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: black;
+    color: black;
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: 600;
+}
