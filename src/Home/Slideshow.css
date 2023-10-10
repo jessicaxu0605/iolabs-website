@@ -40,6 +40,7 @@
 /*only way I've managed to stop slides resizing as they load in is to keep them loaded at all times and move them back*/
 .hidden-slide{
     z-index: -10;
+    display: none;
 }
 
 .current-slide{

@@ -2,11 +2,11 @@ function EventCard(props){
     let status;
     let signup;
         if (props.Status==='upcoming'){
-            status = <p class='eventStatus'>Upcoming Event!</p>;
-            signup = <button class='eventBtn'>Register</button>;
+            status = <p className='eventStatus'>Upcoming Event!</p>;
+            signup = <button className='eventBtn'>Register</button>;
         } else {
-            status = <p class='eventStatus-passed'>Passed Event</p>;
-            signup = <button class='eventBtn' style={{display:'none'}}>Register</button>
+            status = <p className='eventStatus-passed'>Passed Event</p>;
+            signup = <button className='eventBtn' style={{display:'none'}}>Register</button>
         }
     
     let eventClass;
@@ -17,15 +17,15 @@ function EventCard(props){
         }
 
     return(
-        <div class={eventClass}>
-            <div class="eventSection">
-                <div class="eventHeader grid-span-2">
+        <div className={eventClass}>
+            <div className="eventSection">
+                <div className="eventHeader grid-span-2">
                     <h1 class='eventName'>{props.eventName}</h1>
                     {status}
                 </div>
-                <p class='eventDescription grid-span-2'>{props.Description}</p>
-                <b class='eventDate'>{props.Date}</b>
-                <a class="eventLink" href={props.eventUrl} target='_blank'>
+                <p className='eventDescription grid-span-2'>{props.Description}</p>
+                <b className='eventDate'>{props.Date}</b>
+                <a className="eventLink" href={props.eventUrl} target='_blank'>
                     {signup}
                 </a>
                 

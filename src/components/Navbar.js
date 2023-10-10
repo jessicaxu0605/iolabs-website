@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
-import Button from './Button.js'
+import './Navbar.css';
 
 function Navbar(){
     const [showNav, setShowNav] = useState(false);
@@ -9,6 +9,7 @@ function Navbar(){
     const location = useLocation();
     useEffect(() => {
         setShowNav(false);
+        window.scrollTo(0,0);
       }, [location]);
 
     const toggleNav = () => {

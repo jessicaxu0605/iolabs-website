@@ -60,7 +60,9 @@ function SlideshowToggle(props) {
 }
 //SlideshowToggle props: Slide, ActiveSlide, Toggled()
 
-function Slide1() {
+
+//overlay is currently re-rendered with each slide to allow for future overlays to be customized per slide
+function Overlay1(){
     let contentStyle = {
         position: 'absolute',
         padding: '4em',
@@ -83,7 +85,7 @@ function Slide1() {
         transform: 'skew(-18deg)',
     };  
 
-    let mediaQuery = window.matchMedia('(max-width: 650px)')
+    let mediaQuery = window.matchMedia('(max-width: 650px)') //note: will only evaluate upon rendering, not when window is resized
     if (mediaQuery.matches) {
         contentStyle = {
             position: 'absolute',
@@ -91,7 +93,7 @@ function Slide1() {
             padding: '1em',
             top: '20%',
             color: 'white',
-            width: '100vw',
+            width: '80%',
         };
 
         headingStyle = {
@@ -105,29 +107,37 @@ function Slide1() {
             width: '100%',
         };
     } 
-
     return(
-    <div className='slide'>
-        <img src={require('../assets/slideshow1.jpg')} className='background' alt='first slide' 
-            style={{objectPosition: '50% 40%'}}/>
-        <div className='foreground'>
-            <div style={backingStyle}></div>
-            <div style={contentStyle}>
-                <h1 style={headingStyle}>Inspiring</h1>
-                <h1 style={headingStyle}>Innovation</h1>
-                <p>To succeed in this new information-based and highly technological society, students need to develop their capabilities in STEM to levels much beyond what was considered acceptable in the past</p>
-            </div>
+    <div className='foreground'>
+        <div style={backingStyle}></div>
+        <div style={contentStyle}>
+            <h1 style={headingStyle}>Inspiring</h1>
+            <h1 style={headingStyle}>Innovation</h1>
+            <p>To succeed in this new information-based and highly technological society, students need to develop their capabilities in STEM to levels much beyond what was considered acceptable in the past</p>
         </div>
-    </div>    );
+    </div>
+    );
+}
+
+function Slide1() {
+    return(
+        <div className='slide'>
+            <img src={require('../assets/slideshow1.jpg')} className='background' alt='first slide' 
+                style={{objectPosition: '50% 40%'}}
+            />
+            <Overlay1/>
+        </div>    
+    );
 }
 
 function Slide2() {
     return(
-    <div className='slide'>
-        <img src={require('../assets/slideshow2.jpg')} className='background' alt='second slide'
-            style={{objectPosition: '50% 30%'}}
-        />
-    </div>
+        <div className='slide'>
+            <img src={require('../assets/slideshow2.jpg')} className='background' alt='second slide'
+                style={{objectPosition: '50% 30%'}}
+            />
+            <Overlay1/>
+        </div>
     );
 }
 
@@ -137,6 +147,7 @@ function Slide3() {
             <img src={require('../assets/slideshow3.jpg')} className='background' alt='second slide'
                 style={{objectPosition: '50% 40%'}}
             />
+            <Overlay1/>
         </div>
         );
 }
@@ -147,6 +158,7 @@ function Slide4() {
             <img src={require('../assets/slideshow4.jpg')} className='background' alt='second slide'
                 style={{objectPosition: '50% 65%'}}
             />
+            <Overlay1/>
         </div>
         );
 }
@@ -157,6 +169,7 @@ function Slide5() {
             <img src={require('../assets/slideshow5.jpg')} className='background' alt='second slide'
                 style={{objectPosition: '50% 60%'}}
             />
+            <Overlay1/>
         </div>
         );
 }
