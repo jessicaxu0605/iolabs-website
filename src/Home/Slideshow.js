@@ -3,6 +3,7 @@ import './Slideshow.css';
 
 
 function Slideshow() {
+    //simply add or change components here to customize slides
     const slides = [
         <Slide1/>,
         <Slide2/>,
@@ -37,6 +38,7 @@ function Slideshow() {
         }
     }
 
+    //overall slideshow:
     return(
         <div className='slideshow-container'>
             <div className='slideshow-controls'>
@@ -53,6 +55,7 @@ function Slideshow() {
     );
 }
 
+//buttons at base of slideshow
 function SlideshowToggle(props) {
     return(
         <span className= {props.Slide===props.ActiveSlide ? 'slideshow-toggle active' : 'slideshow-toggle'} onClick={()=>props.Toggled()}></span>
@@ -85,6 +88,7 @@ function Overlay1(){
         transform: 'skew(-18deg)',
     };  
 
+    //media controls for small screens
     let mediaQuery = window.matchMedia('(max-width: 650px)') //note: will only evaluate upon rendering, not when window is resized
     if (mediaQuery.matches) {
         contentStyle = {
@@ -119,6 +123,7 @@ function Overlay1(){
     );
 }
 
+//individual slides:
 function Slide1() {
     return(
         <div className='slide'>

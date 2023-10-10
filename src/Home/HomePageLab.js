@@ -1,5 +1,6 @@
 function HomePageLab (props){
 
+    //styling for the branching white lines connecting the labs overviews
     const horizontalConnector = () =>{
         if (props.Position==='left'){
             return(

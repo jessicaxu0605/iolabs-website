@@ -1,3 +1,5 @@
+//the content in each of the labs sections is determined here
+//each lab is its own component, built by customizing the props for the LabsTemplate component
 import {Link} from 'react-router-dom';
 import LabsTemplate from "./LabsTemplate";
     //props: Classes, Heading, DefaultContent, ExpandedContent

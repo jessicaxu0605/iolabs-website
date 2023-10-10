@@ -9,6 +9,7 @@ import {ReactComponent as Github, } from '../assets/icons/github.svg';
 
 
 function PersonCard(props) {
+
     const displayIcon = function (contactType) {
         switch (contactType) {
             case props.Website:
@@ -28,6 +29,8 @@ function PersonCard(props) {
         }
     }
 
+    //if the person has the contact platform, render an icon linking to their page
+    //otherwise, render nothing
     const hasContact = (contact)=>
         contact ?
         <li className='contact-link'>
