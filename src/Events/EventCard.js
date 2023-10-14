@@ -5,7 +5,7 @@ function EventCard(props){
             status = <p className='eventStatus'>Upcoming Event!</p>;
             signup = <button className='eventBtn'>Register</button>;
         } else {
-            status = <p className='eventStatus-passed'>Passed Event</p>;
+            status = <p className='eventStatus-passed'>Past Event</p>;
             signup = <button className='eventBtn' style={{display:'none'}}>Register</button>
         }
     
